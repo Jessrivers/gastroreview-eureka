@@ -5,7 +5,7 @@
     "buildCommand": "./mvnw clean package -DskipTests"
   },
   "deploy": {
-    "startCommand": "java $JAVA_OPTS -jar target/eureka-server-1.0.0.jar",
+    "startCommand": "java -Xmx512m -Xms256m -jar target/eureka-server-1.0.0.jar",
     "healthcheckPath": "/actuator/health",
     "healthcheckTimeout": 300,
     "restartPolicyType": "ON_FAILURE",
