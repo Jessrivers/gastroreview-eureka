@@ -5,4 +5,4 @@ nixPkgs = ["jdk17"]
 cmds = ["./mvnw clean package -DskipTests"]
 
 [phases.start]
-cmd = "java $JAVA_OPTS -jar target/eureka-server-1.0.0.jar"
+cmd = "java -Xmx512m -Xms256m -jar target/eureka-server-1.0.0.jar"
